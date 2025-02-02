@@ -1,0 +1,14 @@
+.:53 {
+    log
+    errors
+    file /zones/db.local.internal
+    file /zones/db.guest.local
+    
+    #Explicit Zone westeurope.afs.azure.net
+    forward westeurope.afs.azure.net 127.0.0.1:53200
+    #Unexcplicit Zone afs.azure.net
+    #forward afs.azure.net 127.0.0.1:53200
+    
+    forward . 8.8.8.8
+    health
+}

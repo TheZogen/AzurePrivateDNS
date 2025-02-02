@@ -1,0 +1,13 @@
+$ORIGIN guest.local.
+$TTL 3600
+@    IN    SOA   ns1.guest.local. admin.guest.local. (
+              2025012801 ; Serial
+              3600       ; Refresh
+              1800       ; Retry
+              604800     ; Expire
+              86400 )    ; Minimum TTL
+
+     IN    NS     ns1.guest.local.
+ns1  IN    A      172.20.0.1
+guest IN    A      172.20.0.50
+vpn   IN    A      172.20.0.100

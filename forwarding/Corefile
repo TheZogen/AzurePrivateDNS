@@ -1,0 +1,7 @@
+.:53 {
+    log
+    errors
+    forward westeurope.afs.azure.net 127.0.0.1:53300
+    forward . 8.8.8.8
+    health
+}

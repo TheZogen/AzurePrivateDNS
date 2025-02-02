@@ -1,0 +1,13 @@
+$ORIGIN local.internal.
+$TTL 3600
+@    IN    SOA   ns1.local.internal. admin.local.internal. (
+              2025012801 ; Serial
+              3600       ; Refresh
+              1800       ; Retry
+              604800     ; Expire
+              86400 )    ; Minimum TTL
+
+     IN    NS     ns1.local.internal.
+ns1  IN    A      192.168.1.1
+host IN    A      192.168.1.10
+app  IN    CNAME  host.local.internal.
