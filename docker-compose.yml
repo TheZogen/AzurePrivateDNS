@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  coredns_your_dns:
+    image: coredns/coredns:latest
+    container_name: coredns_your_dns
+    ports:
+      - "53100:53/udp"
+      - "53100:53/tcp"
+      - "53101:8080"
+    volumes:
+      - ./your_dns/Corefile:/Corefile
+      - ./your_dns/zones:/zones
+    restart: unless-stopped
+
+  coredns_forwarding:
+    image: coredns/coredns:latest
+    container_name: coredns_forwarding
+    ports:
+      - "53200:53/udp"
+      - "53200:53/tcp"
+      - "53201:8080"
+    volumes:
+      - ./forwarding/Corefile:/Corefile
+    restart: unless-stopped
+
+  coredns_authoritative:
+    image: coredns/coredns:latest
+    container_name: coredns_authoritative
+    ports:
+      - "53300:53/udp"
+      - "53300:53/tcp"
+      - "53301:8080"
+    volumes:
+      - ./authoritative/Corefile:/Corefile
+      - ./authoritative/zones:/zones
+    restart: unless-stopped
