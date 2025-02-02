@@ -11,3 +11,5 @@ $TTL 3600
 ns1  IN    A      172.20.0.1
 guest IN    A      172.20.0.50
 vpn   IN    A      172.20.0.100
+
+guest.guest IN    A   172.20.0.75

@@ -1,6 +1,9 @@
-.:53 {
+westeurope.afs.azure.net:53 {
     log
     errors
     file /zones/db.westeurope.afs.azure.net
-    health
+}
+.:53 {
+    log
+    errors
 }
