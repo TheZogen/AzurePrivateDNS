@@ -6,3 +6,4 @@ Three Containers used to demonstrate OnPrem Setup or general other DNS Server wh
 
 The Azure DNS Resolver is only accesibel over a VM or Instance in Azure VNet others cant access the DNS even over VPN.
 
+So the Required Setup to Resolve Private DNS Zones which are used for Services / Instances in Azure like Storage Accoutns to make them internal Resolvabel over DNS (cause standard is public) you need to query the Azure DNS main Server as meantioned. To do that your DNS is required and one more endpoint in Azure (something like a Standard DNS or the Service Azure Private DNS Endpoint) and surely the Azure DNS Server.
